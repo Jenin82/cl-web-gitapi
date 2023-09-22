@@ -3,11 +3,11 @@ let img=document.getElementById("img")
 let input = document.getElementById("textbox")
 let bio=document.getElementById("bio")
 let followers = document.getElementById("followers")
-let username="arjuncvinod"
+let username="Jenin82"
 
 function fetchdata(event){
   event.preventDefault()
-username=input.value || "arjuncvinod"
+username=input.value || "Jenin82"
 repos.innerHTML=""
 fetch(`https://api.github.com/users/${username}`)
   .then((res) => res.json())
@@ -17,7 +17,6 @@ fetch(`https://api.github.com/users/${username}`)
     img.src = data.avatar_url;
     followers.innerText=data.followers
     bio.innerText=data.bio;
-
   });
 
 
